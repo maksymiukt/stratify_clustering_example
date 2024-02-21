@@ -1,4 +1,5 @@
 ortools = 9.0.9048
+pandas==1.2.4
 
 from stratified_k_means_constrained import StratifiedKMeansConstrained
 clf = StratifiedKMeansConstrained(
