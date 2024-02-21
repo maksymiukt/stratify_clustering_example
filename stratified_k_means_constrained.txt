@@ -1,0 +1,13 @@
+ortools = 9.0.9048
+
+from stratified_k_means_constrained import StratifiedKMeansConstrained
+clf = StratifiedKMeansConstrained(
+    n_clusters = 5,     
+    size_min = 23,   
+    size_max = 26,    
+    max_iter=10,        
+    tol=0.001,
+    random_state=None,
+    copy_x=True,
+    n_jobs=-1) 
+labels = clf.fit_predict(eda_graph[['Latitude', 'Longitude']], stratifying_var = eda_graph['PH Freq'])
